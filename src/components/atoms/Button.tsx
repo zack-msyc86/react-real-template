@@ -1,7 +1,13 @@
-import MUIButton from '@mui/material/Button';
+import MUIButton from '@mui/material/Button'
 
-const Button: React.VFC = () => {
-  return <MUIButton variant="contained">Hello World</MUIButton>;
+type Props = {
+  children: React.ReactNode
+}
+
+const Button: React.VFC<Props> = (props) => {
+  return <MUIButton variant="contained">
+    { props.children }
+  </MUIButton>;
 }
 
 export default Button

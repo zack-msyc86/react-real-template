@@ -3,7 +3,9 @@ import Button from './components/atoms/Button';
 const App: React.VFC = () => {
   return (
     <div>
-      <Button />
+      <Button>
+        Hello World
+      </Button>
     </div>
   )
 }
