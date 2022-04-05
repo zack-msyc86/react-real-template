@@ -19,6 +19,7 @@ build({
   target: 'es2015',
   platform: 'browser',
   entryPoints: ['src/main.tsx'],
+  inject: ['config/react-shim.ts'],
   outdir,
   bundle: true,
   minify: !isDev,
