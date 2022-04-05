@@ -1,7 +1,9 @@
+import Button from './components/atoms/Button';
+
 const App: React.VFC = () => {
   return (
     <div>
-      Test
+      <Button />
     </div>
   )
 }
