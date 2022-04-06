@@ -1,5 +1,4 @@
-import { styled } from '@mui/material/styles';
-import { Button as MUIButton, ButtonProps } from '@mui/material/'
+import { Button as MUIButton, ButtonProps, styled } from '@mui/material'
 
 type Props = ButtonProps & {
   children: React.ReactNode,

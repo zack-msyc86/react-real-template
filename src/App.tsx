@@ -11,4 +11,3 @@ const App: React.VFC = () => {
 }
 
 export default App
-
