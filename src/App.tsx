@@ -1,11 +1,13 @@
 import Button from './components/atoms/Button';
+import TextField from './components/atoms/TextField';
 
 const App: React.VFC = () => {
   return (
     <div>
-      <Button variant='contained'>
+      <Button>
         Hello World
       </Button>
+      <TextField />
     </div>
   )
 }

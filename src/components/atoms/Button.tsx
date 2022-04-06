@@ -8,9 +8,13 @@ const StyledButton = styled(MUIButton)({
 });
 
 
-const Button: React.VFC<Props> = ({ children, ...buttonProps }) => {
+const Button: React.VFC<Props> = ({ children, ...props }) => {
+  const defaultProp: ButtonProps = {
+    variant: 'contained'
+  }
+
   return (
-    <StyledButton {...buttonProps}>
+    <StyledButton {...{...defaultProp, ...props}}>
       { children }
     </StyledButton>
   )
