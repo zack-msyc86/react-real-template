@@ -1,19 +1,13 @@
-import { TextField as MUITextField, TextFieldProps, styled } from '@mui/material'
+import { TextField as MUITextField, TextFieldProps} from '@mui/material'
 
-type Props = TextFieldProps
-
-const StyledTextField = styled(MUITextField)({
-});
-
-
-const TextField: React.VFC<Props> = (props) => {
-  const defaultProp: Props = {
-    size: 'small'
-  }
-
+const TextField = (props: TextFieldProps) => {
   return (
-    <StyledTextField {...{...defaultProp, ...props}}/>
+    <MUITextField {...props}/>
   )
+}
+
+TextField.defaultProps = {
+  size: 'small'
 }
 
 export default TextField

@@ -1,23 +1,15 @@
-import { Button as MUIButton, ButtonProps, styled } from '@mui/material'
+import { Button as MUIButton, ButtonProps } from '@mui/material'
 
-type Props = ButtonProps & {
-  children: React.ReactNode,
+const Button = ({ children, ...props }: ButtonProps) => {
+  return (
+    <MUIButton {...props}>
+      { children }
+    </MUIButton>
+  )
 }
 
-const StyledButton = styled(MUIButton)({
-});
-
-
-const Button: React.VFC<Props> = ({ children, ...props }) => {
-  const defaultProp: ButtonProps = {
-    variant: 'contained'
-  }
-
-  return (
-    <StyledButton {...{...defaultProp, ...props}}>
-      { children }
-    </StyledButton>
-  )
+Button.defaultProps = {
+  variant: 'contained'
 }
 
 export default Button
