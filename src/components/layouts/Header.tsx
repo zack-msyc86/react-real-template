@@ -1,6 +1,5 @@
-import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import Button from "../atoms/Button";
-import { Menu as MenuIcon, MicNone } from '@mui/icons-material';
 
 type Menu = {
   text: string,
@@ -19,9 +18,7 @@ const Header = ({menues=[]}: Props) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             React Real Template
           </Typography>
-          {
-            menues.map(m => <Button color="inherit" variant="text" key={m.text}>{m.text}</Button>)
-          }
+          { menues.map(m => <Button color="inherit" variant="text" key={m.text}>{m.text}</Button>) }
         </Toolbar>
       </AppBar>
     </Box>
