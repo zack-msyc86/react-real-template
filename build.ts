@@ -41,7 +41,8 @@ build({
     console.log(`${new Date().toLocaleString()}: Watching source files...`);
     bs.init({
       server: outdir,
-      watch: true
+      watch: true,
+      open: false,
     }, (err) => {
       if (err) {
         console.error(`${new Date().toLocaleString()}: Serve Failed:`, err);

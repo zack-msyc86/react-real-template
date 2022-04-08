@@ -6,7 +6,7 @@ import Button from './components/atoms/Button';
 import TextField from './components/atoms/TextField';
 
 const App = () => {
-  const [acValue, setAcValue] = useState('a')
+  const [acValue, setAcValue] = useState<string | null>(null)
   const acOptions = [
     {value: 'a', label: 'aaa'},
     {value: 'b', label: 'bbb'},
@@ -21,7 +21,7 @@ const App = () => {
         </Button>
         <TextField />
         <div>{acValue}</div>
-        <Autocomplete<string> options={acOptions} onChange={val => setAcValue(val) } value={acValue}/>
+        <Autocomplete options={acOptions} onChange={val => setAcValue(val) } value={acValue}/>
       </ThemeProvider>
     </StrictMode>
   )
