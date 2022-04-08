@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Container } from "@mui/material"
 import { ReactNode } from "react"
 
 type Props = {
@@ -7,9 +7,9 @@ type Props = {
 
 const Main = ({children}: Props) => {
   return (
-    <Box sx={{mt: 8, pt: 1}}>
+    <Container sx={{mt: 8}}>
       {children}
-    </Box>
+    </Container>
   )
 }
 
