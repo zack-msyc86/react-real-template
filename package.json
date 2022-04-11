@@ -19,6 +19,8 @@
     "esbuild": "^0.14.34",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "recoil": "^0.7.0",
+    "recoil-persist": "^4.1.0"
   }
 }
