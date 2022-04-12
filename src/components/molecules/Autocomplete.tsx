@@ -10,12 +10,12 @@ type Option<T> = {
 type Props<T> = {
   options: Array<Option<T>>,
   label?: string,
-  value?: string | null,
+  value?: T | null,
   onChange: (e: T | null) => void,
 }
 
-const Autocomplete = <T=string>({options, label, onChange, value=null}: Props<T>) => {
-  const [selectedLabel, setSelectedLabel] = useState<string | null>(value)
+const Autocomplete = <T,>({options, label, onChange, value=null}: Props<T>) => {
+  const [selectedLabel, setSelectedLabel] = useState<string | null>(options.find(o => o.value == value)?.label || null)
   const optionLabels = useMemo(() => options.map(o => o.label), [options])
   const handler = (v: string | null) => {
     setSelectedLabel(v)
