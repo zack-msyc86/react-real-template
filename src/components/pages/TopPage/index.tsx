@@ -2,9 +2,9 @@ import { isLogInSelector } from "@/store/Auth"
 import { Typography } from "@mui/material"
 import { useState } from "react"
 import { useRecoilValue } from "recoil"
-import Autocomplete from "../molecules/Autocomplete"
-import LogInOrg from "../organisms/LogInOrg"
-import LogOutOrg from "../organisms/LogOutOrg"
+import Autocomplete from "../../molecules/Autocomplete"
+import LogInOrg from "../../organisms/LogInOrg"
+import LogOutOrg from "../../organisms/LogOutOrg"
 
 export default () => {
   const isLogIn = useRecoilValue(isLogInSelector)
