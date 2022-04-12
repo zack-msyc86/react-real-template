@@ -1,15 +1,10 @@
-import { authAtom, logOutMutator } from "@/store/Auth"
-import { useSetRecoilState } from "recoil"
+import { useLogOutMutator } from "@/store/Auth"
 import Button from "../atoms/Button"
 
 export default () => {
-  const setAuth = useSetRecoilState(authAtom)
-  const signOutHandler = () => {
-    logOutMutator().then(auth => {
-      setAuth(auth)
-    })
-  }
+  const logOutMutator = useLogOutMutator()
+
   return (
-    <Button onClick={() => signOutHandler()}>Log Out</Button>
+    <Button onClick={() => logOutMutator()}>Log Out</Button>
   )
 }
