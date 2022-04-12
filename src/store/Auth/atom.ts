@@ -1,6 +1,6 @@
 import { atom } from "recoil"
 import { recoilPersist } from "recoil-persist"
-import { Auth } from "./types"
+import { Auth } from "./type"
 
 const { persistAtom } = recoilPersist()
 

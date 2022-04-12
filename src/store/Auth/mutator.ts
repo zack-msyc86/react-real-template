@@ -1,7 +1,7 @@
-import { useCallback } from "react";
-import { useSetRecoilState } from "recoil";
-import { authAtom } from "./atom";
-import { Auth } from "./types";
+import { useCallback } from "react"
+import { useSetRecoilState } from "recoil"
+import { authAtom } from "./atom"
+import { Auth } from "./type"
 
 export type UserCredential = {id: string, password: string}
 export const useLogInMutator = () => {
