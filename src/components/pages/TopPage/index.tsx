@@ -21,7 +21,7 @@ export default () => {
       <Typography>{isLogIn && '(^^)'}</Typography>
       <LogInOrg/>
       <LogOutOrg/>
-      <Autocomplete<string> options={acOptions} onChange={val => setAcValue(val) } value={acValue}/>
+      <Autocomplete<string> options={acOptions} onChange={val => setAcValue(val)} value={acValue}/>
     </>
   )
 }
