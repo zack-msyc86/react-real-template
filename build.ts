@@ -1,5 +1,6 @@
 const { build } = require('esbuild');
 const bs = require('browser-sync').create();
+const historyApiFallback = require('connect-history-api-fallback')
 const fse = require('fs-extra');
 
 const isDev = process.argv.includes('--dev');
@@ -8,7 +9,7 @@ const outdir = 'dist';
 try {
   fse.rmSync(outdir, { recursive: true, force: true });
   fse.mkdirSync(outdir);
-  fse.copyFileSync('src/public/index.html', `${outdir}/index.html`);
+  fse.copy('src/public', outdir);
 } catch (err) {
   console.error(`initialize dist failed:`, err);
   process.exit(1);
@@ -41,6 +42,7 @@ build({
     console.log(`${new Date().toLocaleString()}: Watching source files...`);
     bs.init({
       server: outdir,
+      middleware: [historyApiFallback()],
       watch: true,
       open: false,
     }, (err) => {

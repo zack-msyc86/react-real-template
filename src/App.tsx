@@ -1,16 +1,21 @@
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
 import Header from './components/layouts/Header';
 import Main from './components/layouts/Main';
-import Router from './config/router';
+import Routes from './config/routes';
+import { BrowserRouter } from 'react-router-dom';
 
 export default () => {
+
   return (
     <ThemeProvider theme={theme}>
-      <Header menues={[{text: 'Login'}]}/>
-      <Main>
-        <Router/>
-      </Main>
+      <CssBaseline />
+      <BrowserRouter>
+        <Header/>
+        <Main>
+          <Routes />
+        </Main>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

@@ -7,7 +7,7 @@ type Props = {
 
 const Main = ({children}: Props) => {
   return (
-    <Container sx={{mt: 8}}>
+    <Container sx={{mt: 10}}>
       {children}
     </Container>
   )

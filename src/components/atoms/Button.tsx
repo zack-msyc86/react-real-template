@@ -1,4 +1,5 @@
 import { Button as MUIButton, ButtonProps } from '@mui/material'
+import { memo } from 'react'
 
 const Button = ({ children, ...props }: ButtonProps) => {
   return (
@@ -12,4 +13,4 @@ Button.defaultProps = {
   variant: 'contained'
 }
 
-export default Button
+export default memo(Button)
